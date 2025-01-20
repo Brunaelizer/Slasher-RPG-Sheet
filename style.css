@@ -1,0 +1,52 @@
+body{
+
+}
+
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.main{
+    border: solid 1px gray;
+    border-radius: 20px;
+}
+
+.header{
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+.sheet-body{
+    padding: 30px;
+}
+
+.border{
+    border: solid 1px gray;
+}
+
+.ability-div input{
+    width: 50px;
+    font-size: large;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.row-element{
+    padding-bottom: 20px;
+}
+
+.left-column{
+    padding-right: 50px;
+}

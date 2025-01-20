@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,63 +9,208 @@
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div class="container main">
-      <div class="row header"></div>
-      <div class="row container sheet-body">
-        <div class="col right-column">
-          <div class="row name">
-            <div class="col">
-              <label for="">Personagem</label>
-              <input type="text" class="f_personagem" />
-            </div>
-            <div class="col">
-              <label for="">Player</label>
-              <input type="text" class="f_player" />
-            </div>
-          </div>
-          <div class="stats">
-            <div class="vida">
-              <label for="vida">Vida</label>
-              <div
-                id="vida"
-                class="progress"
-                role="progressbar"
-                aria-label="Danger example"
-                aria-valuenow="100"
-                aria-valuemin="0"
-                aria-valuemax="100">
-                <div class="progress-bar bg-danger" style="width: 100%"></div>
-              </div>
-            </div>
-            <div class="vigor">
-              <label for="vigor">Vigor</label>
-              <div
-                id="vigor"
-                class="progress"
-                role="progressbar"
-                aria-label="Success example"
-                aria-valuenow="25"
-                aria-valuemin="0"
-                aria-valuemax="100">
-                <div class="progress-bar bg-success" style="width: 25%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="ability">
-            <div class="row">
-              <div class="col">Força</div>
-              <div class="col">Agilidade</div>
-              <div class="col">Inteligencia</div>
-              <div class="col">Constituição</div>
-            </div>
-          </div>
-          <div class="skills"></div>
+  <body class="bg-dark-subtle">
+    <div class="container container-lg main bg-dark">
+      <div class="row header gap-3 row-gap-8">
+        <div class="col title"><h1>Ficha RPG Slasher</h1></div>
+        <div class="col d-grid gap-2 d-md-block">
+          <button class="btn btn-light" type="button">Edit</button>
+          <button class="btn btn-success" type="button">Salvar</button>
+          <button class="btn btn-primary" type="button">Abrir</button>
         </div>
+      </div>
+      <div class="row container sheet-body">
         <div class="col left-column">
-          <div class="inventory">Teste</div>
-          <div class="backstory"></div>
+          <div class="name row row-element">
+            <div class="col form-floating mb-2">
+              <input type="email" class="form-control" id="floatingInput" />
+              <label for="floatingInput">Personagem</label>
+            </div>
+            <div class="col form-floating">
+              <input
+                type="password"
+                class="form-control"
+                id="floatingPassword" />
+              <label for="floatingPassword">Player</label>
+            </div>
+          </div>
+          <div class="stats row row-element">
+            <div class="col main-stats">
+              <div class="row">Vida</div>
+              <div class="row">Vigor</div>
+            </div>
+            <div class="col medo-stat"><button>Medo</button></div>
+          </div>
+          <div class="ability row-element">
+            <div class="row">
+              <div class="col-sm2 border ability-div">
+                <label for="">Força</label><br /><input
+                  type="number"
+                  class="form-control"
+                  value="0"
+                  max="3" />
+              </div>
+              <div class="col-md3 border ability-div">
+                <label for="">Agilidade</label><br /><input
+                  type="number"
+                  class="form-control"
+                  value="0"
+                  max="3" />
+              </div>
+              <div class="col-md3 border ability-div">
+                <label for="">Inteligencia</label><br /><input
+                  type="number"
+                  class="form-control"
+                  value="0"
+                  max="3" />
+              </div>
+              <div class="col-md3 border ability-div">
+                <label for="">Constituição</label><br /><input
+                  type="number"
+                  class="form-control"
+                  value="0"
+                  max="3" />
+              </div>
+            </div>
+          </div>
+          <div class="skills row-element">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault" />
+              <label class="form-check-label" for="flexCheckDefault">
+                Percepção
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckChecked" />
+              <label class="form-check-label" for="flexCheckChecked">
+                Sobrevivência
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckChecked" />
+              <label class="form-check-label" for="flexCheckChecked">
+                Intuição
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckChecked" />
+              <label class="form-check-label" for="flexCheckChecked">
+                Atletismo
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckChecked" />
+              <label class="form-check-label" for="flexCheckChecked">
+                Furtividade
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckChecked" />
+              <label class="form-check-label" for="flexCheckChecked">
+                Enganação
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckChecked" />
+              <label class="form-check-label" for="flexCheckChecked">
+                Medicina
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckChecked" />
+              <label class="form-check-label" for="flexCheckChecked">
+                História/Religião
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckChecked" />
+              <label class="form-check-label" for="flexCheckChecked">
+                Luta
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckChecked" />
+              <label class="form-check-label" for="flexCheckChecked">
+                Pontaria
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckChecked" />
+              <label class="form-check-label" for="flexCheckChecked">
+                Tecnologia
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckChecked" />
+              <label class="form-check-label" for="flexCheckChecked">
+                Crime
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="col right-column">
+          <div class="row">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Background</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Inventário</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
