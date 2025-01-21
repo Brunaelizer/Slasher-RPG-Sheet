@@ -26,9 +26,21 @@ body{
     border: solid 1px gray;
 }
 
+.ability-div{
+    width: 110px;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+}
 .ability-div input{
     width: 50px;
     font-size: large;
+    align-self: center;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
 }
 
 input::-webkit-outer-spin-button,
@@ -50,3 +62,4 @@ input[type=number] {
 .left-column{
     padding-right: 50px;
 }
+
