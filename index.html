@@ -25,9 +25,21 @@
       <div class="row header gap-3 row-gap-8">
         <div class="col title"><h1>Ficha RPG Slasher</h1></div>
         <div class="col d-grid gap-2 d-md-block">
-          <button class="btn btn-light" type="button">Edit</button>
-          <button class="btn btn-success" type="button">Salvar</button>
-          <button class="btn btn-primary" type="button">Abrir</button>
+          <input
+            type="checkbox"
+            class="btn-check"
+            id="btn-edit"
+            autocomplete="off" />
+          <label class="btn btn-outline-light" for="btn-edit">Edit</label>
+          <button class="btn btn-success" type="button" id="btn-salvar">
+            Salvar
+          </button>
+          <input
+            type="file"
+            id="btn-abrir"
+            accept=".json"
+            style="display: none" />
+          <label for="btn-abrir" class="btn btn-primary">Abrir</label>
         </div>
       </div>
       <div class="row container sheet-body">
@@ -51,13 +63,13 @@
                     <input
                       type="number"
                       name=""
-                      id=""
+                      id="f_vida_atual"
                       class="form-control border-success" />
                     <span class="input-group-text border-success">/</span>
                     <input
                       type="number"
                       name=""
-                      id=""
+                      id="f_vida_total"
                       class="form-control border-success" />
                   </div>
                 </div>
@@ -67,13 +79,13 @@
                     <input
                       type="number"
                       name=""
-                      id=""
+                      id="f_vigor_atual"
                       class="form-control border-primary" />
                     <span class="input-group-text border-primary">/</span>
                     <input
                       type="number"
                       name=""
-                      id=""
+                      id="f_vigor_total"
                       class="form-control border-primary" />
                   </div>
                 </div>
@@ -81,13 +93,13 @@
             </div>
 
             <div class="col medo-stat">
+              <br />
               <input
                 type="checkbox"
                 class="btn-check"
-                id="btn-check-outlined"
+                id="btn-medo"
                 autocomplete="off" />
-              <label class="btn btn-outline-danger" for="btn-check-outlined"
-                >Medo</label
+              <label class="btn btn-outline-danger" for="btn-medo">Medo</label
               ><br />
             </div>
           </div>
@@ -97,6 +109,7 @@
                 <label for="">Força</label><br /><input
                   type="number"
                   class="form-control"
+                  id="f_habilidade_1"
                   value="0"
                   max="3" />
               </div>
@@ -104,6 +117,7 @@
                 <label for="">Agilidade</label><br /><input
                   type="number"
                   class="form-control"
+                  id="f_habilidade_2"
                   value="0"
                   max="3" />
               </div>
@@ -111,6 +125,7 @@
                 <label for="">Inteligencia</label><br /><input
                   type="number"
                   class="form-control"
+                  id="f_habilidade_3"
                   value="0"
                   max="3" />
               </div>
@@ -118,6 +133,7 @@
                 <label for="">Constituição</label><br /><input
                   type="number"
                   class="form-control"
+                  id="f_habilidade_4"
                   value="0"
                   max="3" />
               </div>
@@ -136,9 +152,11 @@
                         value="" />
                     </div>
                     <span class="input-group-text">Percepção</span>
+                    <span class="input-group-text">INT</span>
                     <input
                       type="number"
-                      class="form-control"
+                      id="f_skill_1"
+                      class="form-control int"
                       aria-label="Percepção" />
                   </div>
                 </div>
@@ -153,9 +171,11 @@
                         value="" />
                     </div>
                     <span class="input-group-text">Sobrevivência</span>
+                    <span class="input-group-text">INT</span>
                     <input
                       type="number"
-                      class="form-control"
+                      id="f_skill_2"
+                      class="form-control int"
                       aria-label="Sobrevivência" />
                   </div>
                 </div>
@@ -168,12 +188,14 @@
                         class="form-check-input mt-0"
                         type="checkbox"
                         value=""
-                        aria-label="Checkbox for following text input" />
+                        aria-label="Intuição" />
                     </div>
                     <span class="input-group-text">Intuição</span>
+                    <span class="input-group-text">INT</span>
                     <input
                       type="number"
-                      class="form-control"
+                      id="f_skill_3"
+                      class="form-control int"
                       aria-label="Intuição" />
                   </div>
                 </div>
@@ -186,12 +208,14 @@
                         class="form-check-input mt-0"
                         type="checkbox"
                         value=""
-                        aria-label="Checkbox for following text input" />
+                        aria-label="Atletismo" />
                     </div>
                     <span class="input-group-text">Atletismo</span>
+                    <span class="input-group-text">AGI</span>
                     <input
                       type="number"
-                      class="form-control"
+                      class="form-control agi"
+                      id="f_skill_4"
                       aria-label="Atletismo" />
                   </div>
                 </div>
@@ -207,10 +231,12 @@
                         aria-label="Checkbox for following text input" />
                     </div>
                     <span class="input-group-text">Furtividade</span>
+                    <span class="input-group-text">AGI</span>
                     <input
                       type="number"
-                      class="form-control"
-                      aria-label="Atletismo" />
+                      class="form-control agi"
+                      id="f_skill_5"
+                      aria-label="Furtividade" />
                   </div>
                 </div>
               </div>
@@ -222,13 +248,15 @@
                         class="form-check-input mt-0"
                         type="checkbox"
                         value=""
-                        aria-label="Checkbox for following text input" />
+                        aria-label="Enganação" />
                     </div>
                     <span class="input-group-text">Enganação</span>
+                    <span class="input-group-text">INT</span>
                     <input
                       type="number"
-                      class="form-control"
-                      aria-label="Atletismo" />
+                      id="f_skill_6"
+                      class="form-control int"
+                      aria-label="Enganação" />
                   </div>
                 </div>
               </div>
@@ -240,13 +268,15 @@
                         class="form-check-input mt-0"
                         type="checkbox"
                         value=""
-                        aria-label="Checkbox for following text input" />
+                        aria-label="Medicina" />
                     </div>
                     <span class="input-group-text">Medicina</span>
+                    <span class="input-group-text">CON</span>
                     <input
                       type="number"
-                      class="form-control"
-                      aria-label="Atletismo" />
+                      id="f_skill_7"
+                      class="form-control con"
+                      aria-label="Medicina" />
                   </div>
                 </div>
               </div>
@@ -258,13 +288,15 @@
                         class="form-check-input mt-0"
                         type="checkbox"
                         value=""
-                        aria-label="Checkbox for following text input" />
+                        aria-label="História/Religião" />
                     </div>
-                    <span class="input-group-text">História/Religiao</span>
+                    <span class="input-group-text">Hist./Religião</span>
+                    <span class="input-group-text">INT</span>
                     <input
                       type="number"
-                      class="form-control"
-                      aria-label="Atletismo" />
+                      class="form-control int"
+                      id="f_skill_8"
+                      aria-label="História/Religião" />
                   </div>
                 </div>
               </div>
@@ -281,10 +313,12 @@
                         value="" />
                     </div>
                     <span class="input-group-text">Luta</span>
+                    <span class="input-group-text">FOR</span>
                     <input
                       type="number"
-                      class="form-control"
-                      aria-label="Atletismo" />
+                      id="f_skill_9"
+                      class="form-control for"
+                      aria-label="Luta" />
                   </div>
                 </div>
               </div>
@@ -298,10 +332,12 @@
                         value="" />
                     </div>
                     <span class="input-group-text">Pontaria</span>
+                    <span class="input-group-text">FOR</span>
                     <input
                       type="number"
-                      class="form-control"
-                      aria-label="Atletismo" />
+                      id="f_skill_10"
+                      class="form-control for"
+                      aria-label="Pontaria" />
                   </div>
                 </div>
               </div>
@@ -315,10 +351,12 @@
                         value="" />
                     </div>
                     <span class="input-group-text">Tecnologia</span>
+                    <span class="input-group-text">INT</span>
                     <input
                       type="number"
-                      class="form-control"
-                      aria-label="Atletismo" />
+                      id="f_skill_11"
+                      class="form-control int"
+                      aria-label="Tecnologia" />
                   </div>
                 </div>
               </div>
@@ -329,13 +367,16 @@
                       <input
                         class="form-check-input mt-0"
                         type="checkbox"
-                        value="" />
+                        value=""
+                        aria-label="Crime" />
                     </div>
                     <span class="input-group-text">Crime</span>
+                    <span class="input-group-text">INT</span>
                     <input
                       type="number"
-                      class="form-control"
-                      aria-label="Atletismo" />
+                      class="form-control int"
+                      id="f_skill_12"
+                      aria-label="Crime" />
                   </div>
                 </div>
               </div>
@@ -493,5 +534,122 @@
     $("#inventario-lista").on("click", ".btn-remover-item", function () {
       $(this).closest("li").remove();
     });
+
+    function getDados() {
+      const dados = {
+        personagem: $("#f_personagem").val(),
+        player: $("#f_player").val(),
+        vida: {
+          atual: $("#f_vida_atual").val(),
+          total: $("#f_vida_total").val(),
+        },
+        vigor: {
+          atual: $("#f_vigor_atual").val(),
+          total: $("#f_vigor_total").val(),
+        },
+        medo: $("#btn-medo").is(":checked"),
+        habilidades: {
+          forca: $("#f_habilidade_1").val(),
+          agilidade: $("#f_habilidade_2").val(),
+          inteligencia: $("#f_habilidade_3").val(),
+          constituicao: $("#f_habilidade_4").val(),
+        },
+        skills: {
+          percepcao: $("#f_skill_1").val(),
+          sobrevivencia: $("#f_skill_2").val(),
+          intuicao: $("#f_skill_3").val(),
+          atletismo: $("#f_skill_4").val(),
+          furtividade: $("#f_skill_5").val(),
+          enganacao: $("#f_skill_6").val(),
+          medicina: $("#f_skill_7").val(),
+          historia_religiao: $("#f_skill_8").val(),
+          luta: $("#f_skill_9").val(),
+          pontaria: $("#f_skill_10").val(),
+          tecnologia: $("#f_skill_11").val(),
+          crime: $("#f_skill_12").val(),
+        },
+        inventario: [],
+      };
+
+      $("#inventario-lista li").each(function () {
+        const itemNome = $(this).contents().first().text().trim();
+        dados.inventario.push(itemNome);
+      });
+
+      return dados;
+    }
+
+    function preencherFormulario(dados) {
+      // Preenche os campos básicos
+      $("#f_personagem").val(dados.personagem || "");
+      $("#f_player").val(dados.player || "");
+      $("#f_vida_atual").val(dados.vida?.atual || "");
+      $("#f_vida_total").val(dados.vida?.total || "");
+      $("#f_vigor_atual").val(dados.vigor?.atual || "");
+      $("#f_vigor_total").val(dados.vigor?.total || "");
+      $("#btn-medo").prop("checked", dados.medo || false);
+
+      // Preenche as habilidades
+      $("#f_habilidade_1").val(dados.habilidades?.forca || "");
+      $("#f_habilidade_2").val(dados.habilidades?.agilidade || "");
+      $("#f_habilidade_3").val(dados.habilidades?.inteligencia || "");
+      $("#f_habilidade_4").val(dados.habilidades?.constituicao || "");
+
+      // Preenche as skills
+      $("#f_skill_1").val(dados.skills?.percepcao || "");
+      $("#f_skill_2").val(dados.skills?.sobrevivencia || "");
+      $("#f_skill_3").val(dados.skills?.intuicao || "");
+      $("#f_skill_4").val(dados.skills?.atletismo || "");
+      $("#f_skill_5").val(dados.skills?.furtividade || "");
+      $("#f_skill_6").val(dados.skills?.enganacao || "");
+      $("#f_skill_7").val(dados.skills?.medicina || "");
+      $("#f_skill_8").val(dados.skills?.historia_religiao || "");
+      $("#f_skill_9").val(dados.skills?.luta || "");
+      $("#f_skill_10").val(dados.skills?.pontaria || "");
+      $("#f_skill_11").val(dados.skills?.tecnologia || "");
+      $("#f_skill_12").val(dados.skills?.crime || "");
+
+      const inventarioLista = $("#inventario-lista");
+      inventarioLista.empty();
+      if (Array.isArray(dados.inventario)) {
+        dados.inventario.forEach((item) => {
+          inventarioLista.append(`<li>${item}</li>`);
+        });
+      }
+    }
+
+    function lerArquivoJSON(event) {
+      const arquivo = event.target.files[0];
+      if (!arquivo) return;
+
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        try {
+          const dados = JSON.parse(e.target.result);
+          preencherFormulario(dados);
+        } catch (error) {
+          alert("O arquivo JSON é inválido.");
+        }
+      };
+      reader.readAsText(arquivo);
+    }
+
+    function downloadJSON(data, filename = "ficha.json") {
+      const jsonData = JSON.stringify(data, null, 2);
+      const blob = new Blob([jsonData], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    $("#btn-salvar").click(function () {
+      const dadosFormulario = getDados();
+      downloadJSON(dadosFormulario);
+    });
+
+    $("#btn-abrir").change(lerArquivoJSON);
   });
 </script>
