@@ -25,6 +25,9 @@ body{
 .border{
     border: solid 1px gray;
 }
+.border-red{
+    border: solid 1px rgb(102, 8, 8);
+}
 
 .ability-div{
     width: 110px;
@@ -34,6 +37,22 @@ body{
     margin: 10px;
 }
 .ability-div input{
+    width: 50px;
+    font-size: large;
+    align-self: center;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+.status-div{
+    width: 70px;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+}
+.status-div input{
     width: 50px;
     font-size: large;
     align-self: center;
