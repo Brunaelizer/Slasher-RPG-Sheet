@@ -91,54 +91,81 @@
                 </div>
               </div>
             </div>
-
             <div class="col medo-stat">
               <br />
-              <input
-                type="checkbox"
-                class="btn-check"
+              <button
+                type="button"
                 id="btn-medo"
-                autocomplete="off" />
-              <label class="btn btn-outline-danger" for="btn-medo">Medo</label
+                class="btn btn-outline-danger"
+                data-bs-toggle="button">
+                Medo</button
               ><br />
             </div>
           </div>
+
           <div class="ability row-element">
             <div class="row row-cols-auto">
               <div class="col border ability-div">
                 <label for="">Força</label><br /><input
                   type="number"
-                  class="form-control"
-                  id="f_habilidade_1"
+                  class="form-control habilidade"
+                  id="f_forca"
                   value="0"
                   max="3" />
               </div>
               <div class="col border ability-div">
                 <label for="">Agilidade</label><br /><input
                   type="number"
-                  class="form-control"
-                  id="f_habilidade_2"
+                  class="form-control habilidade"
+                  id="f_agilidade"
                   value="0"
                   max="3" />
               </div>
               <div class="col border ability-div">
                 <label for="">Inteligencia</label><br /><input
                   type="number"
-                  class="form-control"
-                  id="f_habilidade_3"
+                  class="form-control habilidade"
+                  id="f_inteligencia"
                   value="0"
                   max="3" />
               </div>
               <div class="col border ability-div">
                 <label for="">Constituição</label><br /><input
                   type="number"
-                  class="form-control"
-                  id="f_habilidade_4"
+                  class="form-control habilidade"
+                  id="f_constituicao"
                   value="0"
                   max="3" />
               </div>
             </div>
           </div>
+          <div class="row status-gerais">
+            <div class="col border-red status-div">
+              <label for="">Proficiencia</label><br /><input
+                type="number"
+                readonly="readonly"
+                class="form-control"
+                id="f_proficiencia"
+                value="2" />
+            </div>
+            <div class="col border-red status-div">
+              <label for="">Resistência</label><br /><input
+                type="number"
+                readonly="readonly"
+                class="form-control"
+                id="f_resistencia"
+                value="10" />
+            </div>
+            <div class="col border-red status-div">
+              <label for="">Iniciativa</label><br /><input
+                type="number"
+                readonly="readonly"
+                class="form-control"
+                id="f_iniciativa"
+                value="0" />
+            </div>
+          </div>
+
           <div class="skills row row-element">
             <div class="col">
               <label>Skills</label>
@@ -147,7 +174,7 @@
                   <div class="input-group flex-nowrap">
                     <div class="input-group-text">
                       <input
-                        class="form-check-input mt-0"
+                        class="form-check-input mt-0 check-skill"
                         type="checkbox"
                         value="" />
                     </div>
@@ -157,6 +184,7 @@
                       type="number"
                       id="f_skill_1"
                       class="form-control int"
+                      value="0"
                       aria-label="Percepção" />
                   </div>
                 </div>
@@ -166,7 +194,7 @@
                   <div class="input-group flex-nowrap">
                     <div class="input-group-text">
                       <input
-                        class="form-check-input mt-0"
+                        class="form-check-input mt-0 check-skill"
                         type="checkbox"
                         value="" />
                     </div>
@@ -176,6 +204,7 @@
                       type="number"
                       id="f_skill_2"
                       class="form-control int"
+                      value="0"
                       aria-label="Sobrevivência" />
                   </div>
                 </div>
@@ -185,7 +214,7 @@
                   <div class="input-group flex-nowrap">
                     <div class="input-group-text">
                       <input
-                        class="form-check-input mt-0"
+                        class="form-check-input mt-0 check-skill"
                         type="checkbox"
                         value=""
                         aria-label="Intuição" />
@@ -196,6 +225,7 @@
                       type="number"
                       id="f_skill_3"
                       class="form-control int"
+                      value="0"
                       aria-label="Intuição" />
                   </div>
                 </div>
@@ -205,7 +235,7 @@
                   <div class="input-group flex-nowrap">
                     <div class="input-group-text">
                       <input
-                        class="form-check-input mt-0"
+                        class="form-check-input mt-0 check-skill"
                         type="checkbox"
                         value=""
                         aria-label="Atletismo" />
@@ -216,6 +246,7 @@
                       type="number"
                       class="form-control agi"
                       id="f_skill_4"
+                      value="0"
                       aria-label="Atletismo" />
                   </div>
                 </div>
@@ -225,7 +256,7 @@
                   <div class="input-group flex-nowrap">
                     <div class="input-group-text">
                       <input
-                        class="form-check-input mt-0"
+                        class="form-check-input mt-0 check-skill"
                         type="checkbox"
                         value=""
                         aria-label="Checkbox for following text input" />
@@ -234,6 +265,7 @@
                     <span class="input-group-text">AGI</span>
                     <input
                       type="number"
+                      value="0"
                       class="form-control agi"
                       id="f_skill_5"
                       aria-label="Furtividade" />
@@ -245,7 +277,7 @@
                   <div class="input-group flex-nowrap">
                     <div class="input-group-text">
                       <input
-                        class="form-check-input mt-0"
+                        class="form-check-input mt-0 check-skill"
                         type="checkbox"
                         value=""
                         aria-label="Enganação" />
@@ -256,47 +288,8 @@
                       type="number"
                       id="f_skill_6"
                       class="form-control int"
+                      value="0"
                       aria-label="Enganação" />
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <div class="input-group flex-nowrap">
-                    <div class="input-group-text">
-                      <input
-                        class="form-check-input mt-0"
-                        type="checkbox"
-                        value=""
-                        aria-label="Medicina" />
-                    </div>
-                    <span class="input-group-text">Medicina</span>
-                    <span class="input-group-text">CON</span>
-                    <input
-                      type="number"
-                      id="f_skill_7"
-                      class="form-control con"
-                      aria-label="Medicina" />
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <div class="input-group flex-nowrap">
-                    <div class="input-group-text">
-                      <input
-                        class="form-check-input mt-0"
-                        type="checkbox"
-                        value=""
-                        aria-label="História/Religião" />
-                    </div>
-                    <span class="input-group-text">Hist./Religião</span>
-                    <span class="input-group-text">INT</span>
-                    <input
-                      type="number"
-                      class="form-control int"
-                      id="f_skill_8"
-                      aria-label="História/Religião" />
                   </div>
                 </div>
               </div>
@@ -308,7 +301,49 @@
                   <div class="input-group flex-nowrap">
                     <div class="input-group-text">
                       <input
-                        class="form-check-input mt-0"
+                        class="form-check-input mt-0 check-skill"
+                        type="checkbox"
+                        value=""
+                        aria-label="Medicina" />
+                    </div>
+                    <span class="input-group-text">Medicina</span>
+                    <span class="input-group-text">CON</span>
+                    <input
+                      type="number"
+                      id="f_skill_7"
+                      class="form-control con"
+                      value="0"
+                      aria-label="Medicina" />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="input-group flex-nowrap">
+                    <div class="input-group-text">
+                      <input
+                        class="form-check-input mt-0 check-skill"
+                        type="checkbox"
+                        value=""
+                        aria-label="História/Religião" />
+                    </div>
+                    <span class="input-group-text">Hist./Religião</span>
+                    <span class="input-group-text">INT</span>
+                    <input
+                      type="number"
+                      class="form-control int"
+                      id="f_skill_8"
+                      value="0"
+                      aria-label="História/Religião" />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="input-group flex-nowrap">
+                    <div class="input-group-text">
+                      <input
+                        class="form-check-input mt-0 check-skill"
                         type="checkbox"
                         value="" />
                     </div>
@@ -318,6 +353,7 @@
                       type="number"
                       id="f_skill_9"
                       class="form-control for"
+                      value="0"
                       aria-label="Luta" />
                   </div>
                 </div>
@@ -327,7 +363,7 @@
                   <div class="input-group flex-nowrap">
                     <div class="input-group-text">
                       <input
-                        class="form-check-input mt-0"
+                        class="form-check-input mt-0 check-skill"
                         type="checkbox"
                         value="" />
                     </div>
@@ -337,6 +373,7 @@
                       type="number"
                       id="f_skill_10"
                       class="form-control for"
+                      value="0"
                       aria-label="Pontaria" />
                   </div>
                 </div>
@@ -346,7 +383,7 @@
                   <div class="input-group flex-nowrap">
                     <div class="input-group-text">
                       <input
-                        class="form-check-input mt-0"
+                        class="form-check-input mt-0 check-skill"
                         type="checkbox"
                         value="" />
                     </div>
@@ -356,6 +393,7 @@
                       type="number"
                       id="f_skill_11"
                       class="form-control int"
+                      value="0"
                       aria-label="Tecnologia" />
                   </div>
                 </div>
@@ -365,7 +403,7 @@
                   <div class="input-group flex-nowrap">
                     <div class="input-group-text">
                       <input
-                        class="form-check-input mt-0"
+                        class="form-check-input mt-0 check-skill"
                         type="checkbox"
                         value=""
                         aria-label="Crime" />
@@ -376,6 +414,7 @@
                       type="number"
                       class="form-control int"
                       id="f_skill_12"
+                      value="0"
                       aria-label="Crime" />
                   </div>
                 </div>
@@ -549,10 +588,10 @@
         },
         medo: $("#btn-medo").is(":checked"),
         habilidades: {
-          forca: $("#f_habilidade_1").val(),
-          agilidade: $("#f_habilidade_2").val(),
-          inteligencia: $("#f_habilidade_3").val(),
-          constituicao: $("#f_habilidade_4").val(),
+          forca: $("#f_forca").val(),
+          agilidade: $("#f_agilidade").val(),
+          inteligencia: $("#f_inteligencia").val(),
+          constituicao: $("#f_constituicao").val(),
         },
         skills: {
           percepcao: $("#f_skill_1").val(),
@@ -590,10 +629,10 @@
       $("#btn-medo").prop("checked", dados.medo || false);
 
       // Preenche as habilidades
-      $("#f_habilidade_1").val(dados.habilidades?.forca || "");
-      $("#f_habilidade_2").val(dados.habilidades?.agilidade || "");
-      $("#f_habilidade_3").val(dados.habilidades?.inteligencia || "");
-      $("#f_habilidade_4").val(dados.habilidades?.constituicao || "");
+      $("#f_forca").val(dados.habilidades?.forca || "");
+      $("#f_agilidade").val(dados.habilidades?.agilidade || "");
+      $("#f_inteligencia").val(dados.habilidades?.inteligencia || "");
+      $("#f_constituicao").val(dados.habilidades?.constituicao || "");
 
       // Preenche as skills
       $("#f_skill_1").val(dados.skills?.percepcao || "");
@@ -651,5 +690,51 @@
     });
 
     $("#btn-abrir").change(lerArquivoJSON);
+
+    function calcularStatus() {
+      debugger;
+      $("#f_resistencia").val(10 + parseInt($("#f_constituicao").val()));
+      $("#f_iniciativa").val(parseInt($("#f_agilidade").val()));
+
+      $(".for").val(parseInt($("#f_forca").val()));
+      $(".agi").val(parseInt($("#f_agilidade").val()));
+      $(".int").val(parseInt($("#f_inteligencia").val()));
+      $(".con").val(parseInt($("#f_constituicao").val()));
+
+      var vida = (parseInt($("#f_constituicao").val()) * 12) / 2;
+      $("#f_vida_total").val(vida);
+
+      var vigor = 10 + parseInt($("#f_agilidade").val());
+      $("#f_vigor_total").val(vigor);
+    }
+
+    $(this).on("change", ".check-skill", function () {
+      var input = $(this).closest(".input-group").find('input[type="number"]');
+      var total = parseInt(input.val());
+
+      if ($(this).is(":checked")) {
+        total += parseInt($("#f_proficiencia").val());
+      } else {
+        total -= parseInt($("#f_proficiencia").val());
+      }
+
+      input.val(total).change();
+    });
+
+    $("#btn-medo").on("click", function () {
+      var indice = -1;
+      if ($(this).hasClass("active")) {
+        indice = indice * -1;
+      }
+
+      $("#f_inteligencia").val($("#f_inteligencia").val() - indice);
+      $("#f_forca").val($("#f_forca").val() - indice * -1);
+
+      $(".habilidade").trigger("change");
+    });
+
+    $(".habilidade").on("change", function () {
+      calcularStatus();
+    });
   });
 </script>
