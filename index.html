@@ -25,12 +25,13 @@
       <div class="row header gap-3 row-gap-8">
         <div class="col title"><h1>Ficha RPG Slasher</h1></div>
         <div class="col d-grid gap-2 d-md-block">
-          <input
-            type="checkbox"
-            class="btn-check"
+          <button
+            type="button"
             id="btn-edit"
-            autocomplete="off" />
-          <label class="btn btn-outline-light" for="btn-edit">Edit</label>
+            class="btn btn-outline-light"
+            data-bs-toggle="button">
+            Edit
+          </button>
           <button class="btn btn-success" type="button" id="btn-salvar">
             Salvar
           </button>
@@ -732,6 +733,22 @@
 
       $(".habilidade").trigger("change");
     });
+
+    function botaoEdit(btn) {
+      debugger;
+      var ativo = true;
+      console.log(btn);
+      if ($(btn).hasClass("active")) {
+        ativo = false;
+      }
+      $(".habilidade").prop("readonly", ativo);
+    }
+
+    $("#btn-edit").on("click", function () {
+      botaoEdit(this);
+    });
+
+    botaoEdit($("#btn-edit"));
 
     $(".habilidade").on("change", function () {
       calcularStatus();
